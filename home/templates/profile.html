@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="px-10vw flex flex-col md:flex-row">
+    <!-- Top bar in obile view -->
     <div class="border border-b-1 flex flex-row justify-between p-3 md:hidden">
       <div>
         <svg
@@ -62,6 +63,8 @@
         </svg>
       </div>
     </div>
+
+    <!-- Left Sidebar -->
     <div
       class="hidden h-screen border border-r-2 border-gray-200 md:flex flex-col px-4 lg:px-10 items-center lg:items-start justify-around"
     >
@@ -86,7 +89,7 @@
         class="hidden text-gray-500 hover:text-gray-700 text-xl items-center mb-4 lg:flex flex-row"
       >
         <svg
-          class="w-44 h-44"
+          class="w-44 h-20"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-27.750945 -13.120125 240.50819 78.72075"
         >
@@ -100,7 +103,7 @@
         href="#"
         class="text-gray-500 hover:text-gray-700 text-xl items-center mb-4 flex flex-row"
         ><svg
-          class="w-6 h-6 text-gray-500"
+          class="w-7 h-7 lg:mr-3 text-gray-500"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -116,51 +119,44 @@
         </svg>
         <span class="hidden lg:flex"> Home </span>
       </a>
-      <a
-        href="#"
-        class="text-gray-500 hover:text-gray-700 mb-4 font-bold text-xl items-center flex flex-row"
-        ><svg
-          class="w-6 h-6 text-gray-500"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.3-.6-1-1-1.6-1H7.6c-.7 0-1.3.4-1.6 1M4 5h16c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1V6c0-.6.4-1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
-          />
+      <a href="#" class="text-gray-500 hover:text-gray-700 text-xl items-center mb-4 flex flex-row">
+        <svg class="w-7 h-7 lg:mr-3 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+            d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
         </svg>
-        <span class="hidden lg:flex"> Profile </span>
+        <span class="hidden lg:flex"> Search </span>
       </a>
+      <a href="#" class="text-gray-500 hover:text-gray-700 text-xl items-center mb-4 flex flex-row">
+        <img class="w-7 h-7 lg:mr-3" src="{% static 'compass-svgrepo-com.svg' %}" alt="">
+        <span class="hidden lg:flex"> Explore </span>
+      </a>
+      <a href="#" class="text-gray-500 hover:text-gray-700 text-xl items-center mb-4 flex flex-row">
+        <img class="w-7 h-7 lg:mr-3" src="{% static 'video-player.svg' %}" alt="">
+        <span class="hidden lg:flex"> Reels </span>
+      </a>
+      <a href="#" class="text-gray-500 hover:text-gray-700 text-xl items-center mb-4 flex flex-row">
+        <img class="w-7 h-7 lg:mr-3" src="{% static 'paper-plane.svg' %}" alt="">
+        <span class="hidden lg:flex"> Messages </span>
+      </a>
+      <a href="#" class="text-gray-500 hover:text-gray-700 text-xl items-center mb-4 flex flex-row">
+        <img class="w-7 h-7 lg:mr-3" src="{% static 'heart.svg' %}" alt="">
+        <span class="hidden lg:flex"> Notifications </span>
+      </a>
+      <a href="#" class="text-gray-500 hover:text-gray-700 text-xl items-center mb-4 flex flex-row">
+        <img class="w-7 h-7 lg:mr-3" src="{% static 'create.svg' %}" alt="">
+        <span class="hidden lg:flex"> Create </span>
+      </a>
+      <a href="#" class="text-gray-500 hover:text-gray-700 text-xl items-center mb-4 flex flex-row">
+        <img class="w-7 h-7 lg:mr-3 rounded-full" src="{{ profile.profile_pic.url}}" alt="">
+        <span class="hidden lg:flex font-black"> Profile </span>
+      </a>
+      
       <a
         href="#"
         class="text-gray-500 hover:text-gray-700 text-xl items-center mb-4 flex flex-row"
         ><svg
-          class="w-6 h-6 text-gray-500"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M10 19H5a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h2m10 1a3 3 0 0 1-3 3m3-3a3 3 0 0 0-3-3m3 3h1m-4 3a3 3 0 0 1-3-3m3 3v1m-3-4a3 3 0 0 1 3-3m-3 3h-1m4-3v-1m-2.1 1.9-.7-.7m5.6 5.6-.7-.7m-4.2 0-.7.7m5.6-5.6-.7.7M12 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-          />
-        </svg>
-        <span class="hidden lg:flex"> Settings </span>
-      </a>
-      <a
-        href="#"
-        class="text-gray-500 hover:text-gray-700 text-xl items-center mb-4 flex flex-row"
-        ><svg
-          class="w-6 h-6 text-gray-500"
+          class="w-7 h-7 lg:mr-3 text-gray-500"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -177,31 +173,29 @@
       </a>
     </div>
 
-    <div class="flex flex-col">
-      <div class="flex flex-col items-center justify-start my-10 mx-10">
+    <div class="flex flex-col w-full md:mx-5 lg:mx-20">
+      <div class="w-full flex flex-col items-center justify-start md:my-10 md:mx-10">
         <div class="flex flex-row items-center justify-center">
-          <div class="mr-20">
+          <div class="px-2 lg:mx-10 w-32 h-32">
             <img
               src="{{ profile.profile_pic.url}}"
               alt="profile"
-              class="w-32 h-32 rounded-full"
+              class="rounded-full "
             />
           </div>
-          <div>
-            <div class="flex flex-row">
-              <p class="text-lg text-gray-500">{{ profile.username }}</p>
-              <button class="bg-gray-300 rounded mx-4 px-4 py-2">
-                Edit profile
-              </button>
-              <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                <input type="file" name="image" accept="image/*">
-                <button type="submit" class="bg-gray-300 rounded mx-4 px-4 py-2">
-                  Add image
+          <div class="px-5 flex flex-col py-4">
+            <div class="flex flex-col md:flex-row ">
+              <p class="text-2xl text-gray-500">{{ profile.username }}</p>
+              <div class="mt-2 md:mt-0 flex flex-row">
+                <button class="bg-gray-300 rounded-md mr4 md:mx-4 px-4 py-1">
+                  Edit profile
                 </button>
-              </form>
+                <button type="submit" class="bg-gray-300 rounded-md mx-2 md:mx-4 px-4 py-1">
+                  View archive
+                </button>
+              </div>
             </div>
-            <div class="flex flex-row items-center justify-center mt-4">
+            <div class="hidden md:flex flex-row items-center space-x-10 mt-4">
               <div class="flex flex-row items-center justify-center">
                 <p class="text-2xl font-bold" id="postCount">
                   {{ posts|length }}
@@ -220,13 +214,53 @@
             <h1 class="text-md font-bold mt-2">{{ profile.names }}</h1>
           </div>
         </div>
+        <form class="mt-2 flex flex-row items-center" action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input
+            class="text-md text-gray-900 border border-gray-300 rounded cursor-pointer bg-gray-50"
+            type="file" id="picture" name="picture" accept="image/*">
+          <button type="submit" class="bg-gray-300 rounded mx-4 px-4 py-1">
+            Post image
+          </button>
+        </form>
       </div>
-      <hr class="my-4 mx-6 border-gray-300" />
-
-      <div class="flex flex-row items-center justify-center">
-        {% for post in posts %}
+      <hr class="md:hidden">
+      <div class="flex flex-row justify-around md:hidden py-2">
         <div class="flex flex-col items-center justify-center">
-          <img src="{{ post.picture.url }}" alt="post" class="w-32 h-32" />
+          <p class=" font-bold" id="postCount">
+            {{ posts|length }}
+          </p>
+          <p class="text-sm text-gray-500">posts</p>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <p class=" font-bold">0</p>
+          <p class="text-sm text-gray-500">followers</p>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <p class=" font-bold">0</p>
+          <p class="text-sm text-gray-500">following</p>
+        </div>
+      </div>
+      <hr >
+      <div class="flex flex-row justify-around md:justify-center md:space-x-16 pb-2">
+        <div class="md:flex flex-row md:items-center md:space-x-2 text-black font-semibold border-t-2 border-gray-400 hover:cursor-pointer">
+          <img class="w-7 h-7 md:w-4 md:h-4" src="{% static 'grid.svg' %}" alt="">
+          <p class="hidden md:flex">POSTS</p>
+        </div>
+        <div class="md:flex flex-row md:items-center md:space-x-2 text-[#6B7280] font-semibold hover:cursor-pointer">
+          <img class="w-7 h-7 md:w-4 md:h-4" src="{% static 'saved.svg' %}" alt="">
+          <p class="hidden md:flex">SAVED</p>
+        </div>
+        <div class="md:flex flex-row md:items-center md:space-x-2 text-[#6B7280] font-semibold hover:cursor-pointer">
+          <img class="w-7 h-7 md:w-4 md:h-4" src="{% static 'pip-user.svg' %}" alt="">
+          <p class="hidden md:flex">TAGGED</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4">
+        {% for post in posts %}
+        <div class="max-w-sm max-h-80">
+          <img src="{{ post.picture.url }}" alt="post" class="w-full h-full" />
         </div>
         {% endfor %}
       </div>

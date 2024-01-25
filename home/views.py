@@ -12,7 +12,8 @@ def profile(request):
 
 def upload(request):
     if request.method == "POST":
-        picture = request.FILES.get("picture")
-        Post.objects.create(picture=picture)
+        image = Post()
+        image.picture = request.FILES.get("picture")
+        image.save()
         return redirect("profile")
     return render(request, "upload.html")
