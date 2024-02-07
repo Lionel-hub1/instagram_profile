@@ -4,8 +4,8 @@ from .models import *
 
 def profile(request):
     context = {
-        "profile": Profile.objects.first(),
-        "posts": Post.objects.all(),
+        "profile" : Profile.objects.first(),
+        "posts" : Post.objects.all(),
     }
     return render(request, "profile.html", context)
 
